@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
-* Студент: [Dmitriy Fokeev](https://up.htmlacademy.ru/htmlcss-individual/1/user/2397215).
-* Наставник: `Неизвестно`.
+- Студент: [Dmitriy Fokeev](https://up.htmlacademy.ru/htmlcss-individual/1/user/2397215).
+- Наставник: `Ирина Малиновская`.
 
 ---
 
