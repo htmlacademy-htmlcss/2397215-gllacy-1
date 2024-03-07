@@ -54,6 +54,14 @@ body {
   min-height: 100%;
 }
 
+.slide-2 {
+  background-color: #69a9ff;
+}
+
+.slide-3 {
+  background-color: #fcc850;
+}
+
 .button {
   font-weight: 700;
   line-height: 20px;
@@ -736,12 +744,44 @@ body {
   background: #ffffff;
   border: 1px solid #b9b9b9;
   border-radius: 4px;
-  color: #b9b9b9;
+  color: #2d3440;
   font-size: 16px;
   line-height: 20px;
   box-sizing: border-box;
   padding: 0 16px;
   font-family: "Inter";
+}
+
+.field::placeholder {
+  color: #b9b9b9;
+  opacity: 1;
+}
+
+.field:hover {
+  border-color: #2d3440;
+}
+
+.field:focus {
+  border: 2px solid #2d3440;
+}
+
+.field:invalid {
+  border-color: #ea5454;
+}
+
+.field:invalid:hover {
+  border: 2px solid #ea5454;
+}
+
+.field:disabled {
+  opacity: 0.65;
+  border-color: #b9b9b9;
+  background-color: #e7e7e7;
+}
+
+.field:disabled:hover {
+  border-color: #b9b9b9;
+  background-color: #e7e7e7;
 }
 
 /* Slider */
@@ -866,6 +906,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.slide-2 .slide-background-active {
+  background: #9fc8ff;
+}
+
+.slide-2 .slide-background {
+  background: #9fc8ff;
+}
+
+.slide-3 .slide-background-active {
+  background: #fcdc92;
+}
+
+.slide-3 .slide-background {
+  background: #fcdc92;
 }
 
 .slide {
