@@ -511,13 +511,12 @@ body {
 
 .navigation-container {
   display: flex;
-  width: 1170px;
-  min-height: 104px;
-  margin: 0 auto;
-  justify-content: space-between;
-  padding: 18px 0;
-  align-items: center;
-  box-sizing: border-box;
+    width: 1170px;
+    min-height: 68px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 18px 40px;
+    align-items: center;
 }
 
 .navigation {
@@ -720,6 +719,8 @@ body {
   width: 100%;
   margin: 0 auto;
   flex-grow: 1;
+  padding-left: 40px;
+    padding-right: 40px;
 }
 
 .main-wrapper {
@@ -1302,10 +1303,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 160px;
+  min-height: 159px;
   width: 685px;
+  padding: 50px 0;
   margin-bottom: 23px;
   margin-left: auto;
+  box-sizing: border-box;
 }
 
 .pagination {
@@ -1320,8 +1323,9 @@ body {
 .pagination-link {
   color: #2d3440;
   text-decoration: none;
-  width: 24px;
-  height: 24px;
+  min-width: 26px;
+  min-height: 26px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1331,16 +1335,16 @@ body {
   padding: 1px 7px;
   border: 1px solid #2d3440;
   background: rgba(252, 252, 252, 0.3);
-  width: 8px;
-  height: 20px;
+  min-width: 10px;
+  min-height: 20px;
   border-radius: 50px;
 }
 
 .pagination-link:hover {
   padding: 2px 8px;
   background: rgba(252, 252, 252, 0.5);
-  width: 8px;
-  height: 20px;
+  min-width: 10px;
+  min-height: 20px;
   border-radius: 50px;
 }
 
@@ -1348,8 +1352,8 @@ body {
   padding: 1px 7px;
   border: 1px solid #fcfcfc;
   background: rgba(252, 252, 252, 0.5);
-  width: 8px;
-  height: 20px;
+  min-width: 10px;
+  min-height: 20px;
   border-radius: 50px;
 }
 
@@ -1357,8 +1361,8 @@ body {
   padding: 2px 8px;
   background: #fcfcfc;
   border-radius: 50px;
-  width: 8px;
-  height: 20px;
+  min-width: 10px;
+  min-height: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1368,8 +1372,8 @@ body {
 .pagination-next {
   color: #2d3440;
   text-decoration: none;
-  width: 16px;
-  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1973,12 +1977,18 @@ body {
 .footer-container {
   display: flex;
   justify-content: space-between;
-  padding: 46px 0;
-
+  flex-direction: column;
+  padding: 46px 40px;
 }
 
 .footer-catalog {
+  padding: 0 40px 46px;
+}
+
+.footer-catalog::before {
   border-top: 1px solid rgba(252, 252, 252, 0.3);
+padding-bottom: 46px;
+content: '';
 }
 
 .footer-wrapper {
