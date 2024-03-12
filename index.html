@@ -8,7 +8,10 @@
     <link rel="icon" type="image/png" sizes="152x152" href="image/favicon.png">
 
   </head>
-  <body class="slide-3">
+
+<!-- Для смены цвета добавить класс slide-1 / slide-2 / slide-3 -->
+
+  <body>
     <header class="page-header">
       <div class="navigation-container">
         <a class="logo">
@@ -137,6 +140,8 @@
             </div>
           </div>
 
+<!-- Для просмотра корзины с товарами и без, нужно убрать класс hidden -->
+
           <div class="hidden navigation-user-item">
             <a class="navigation-user-link navigation-cart" href="#">
               <svg
@@ -166,7 +171,10 @@
             </div>
           </div>
 
-          <div class="navigation-user-item">
+          <div class="navigation-user-item current">
+
+            <!-- Для просмотра стиля current, нужно добавить к тегу "a" класс current -->
+
             <a class="navigation-user-link navigation-cart" href="#">
               <svg
                 width="16"
@@ -193,10 +201,9 @@
                     <img
                       class="cart-img"
                       src="image/photo.png"
-                      alt="ice cream"
                       width="46"
                       height="46"
-                      alt="Фото вкуса мороженого"
+                      alt="Фото мороженого Малинка"
                     />
                     <div class="cart-text">
                       <span class="heading-5">Малинка</span>
@@ -213,10 +220,9 @@
                     <img
                       class="cart-img"
                       src="image/photo-3.png"
-                      alt="ice cream"
                       width="46"
                       height="46"
-                      alt="Фото вкуса мороженого"
+                      alt="Фото мороженого Бабл-гам"
                     />
                     <div class="cart-text">
                       <span class="heading-5">Бабл-гам</span>
@@ -262,7 +268,7 @@
           <ul class="slide list-reset">
             <li class="active">
               <div class="slide-background-active">
-                <a class="slider-button slider-prev" href="slide-2.html">
+                <a class="slider-button slider-prev">
                   <svg
                     width="16"
                     height="16"
@@ -279,7 +285,7 @@
                   </svg>
                   <span class="visually-hidden">Предыдущий слайд</span>
                 </a>
-                <a class="slider-button slider-next" href="slide-1.html">
+                <a class="slider-button slider-next">
                   <svg
                     width="16"
                     height="16"
@@ -298,7 +304,7 @@
                 </a>
                 <img
                   class="slide-image"
-                  src="image/ice-cream-main-3.png"
+                  src="image/ice-cream-main.png"
                   width="327"
                   height="507"
                   alt="Примеры мороженого в слайдере."
@@ -309,7 +315,7 @@
               <div class="slide-background">
                 <img
                   class="slide-image"
-                  src="image/ice-cream-1.png"
+                  src="image/ice-cream-2.png"
                   width="66"
                   height="150"
                   alt="Примеры мороженого в слайдере."
@@ -320,7 +326,7 @@
               <div class="slide-background">
                 <img
                   class="slide-image"
-                  src="image/ice-cream-2.png"
+                  src="image/ice-cream-3.png"
                   width="66"
                   height="150"
                   alt="Примеры мороженого в слайдере."
@@ -694,7 +700,7 @@
                 type="email"
                 name="newsletter-email"
                 id="newsletter-email"
-                required
+
               />
               <button class="pink-button" type="submit">Отправить</button>
             </form>
@@ -766,6 +772,7 @@
                   id="delivery-date"
                   name="delivery-date"
                   placeholder="01.04.2020"
+                  required
                 />
               </p>
               <p class="delivery-form-phone">
@@ -778,6 +785,7 @@
                   id="delivery-form-phone"
                   name="delivery-form-phone"
                   placeholder="+7 800 999-00-00"
+                  required
                 />
               </p>
             </div>
@@ -816,6 +824,7 @@
                 id="delivery-address"
                 name="delivery-address"
                 placeholder="ул. Большая Конюшенная, 19/8"
+                required
               />
             </p>
             <button class="pink-button" type="submit">Отправить</button>
@@ -922,6 +931,8 @@
       </div>
     </footer>
 
+<!-- Для просмотра формы обртаной связи, нужно убрать класс hidden -->
+
     <div class="modal-container hidden">
       <div class="modal modal-auth">
         <button class="modal-close-button">
@@ -931,16 +942,16 @@
           <h3 class="modal-title heading-3">Мы обязательно ответим вам!</h3>
           <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
             <p class="field-group">
-              <label class="visually-hidden" for="auth-login">Логин</label>
+              <label class="visually-hidden" >Имя и фамилия</label>
               <input class="feedback-form-field field" type="text" id="feedback-name" name="feedback-name" placeholder="Имя и фамилия">
             </p>
             <p class="field-group">
-              <label class="visually-hidden" for="auth-password">Пароль</label>
+              <label class="visually-hidden" >Email</label>
               <input class="feedback-form-field field" type="email" id="feedback-email" name="feedback-email" placeholder="email@example.com">
             </p>
             <p class="field-group">
-              <label class="visually-hidden" for="auth-password">Пароль</label>
-              <textarea class="feedback-form-field-text field" type="text" id="feedback-text" name="feedback-text" placeholder="В свободной форме"></textarea>
+              <label class="visually-hidden" >Текстовое сообщение</label>
+              <textarea class="feedback-form-field-text field" id="feedback-text" name="feedback-text" placeholder="В свободной форме"></textarea>
             </p>
             <button class="pink-button feedback-button" type="submit">Отправить</button>
           </form>

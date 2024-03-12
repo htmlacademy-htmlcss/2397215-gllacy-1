@@ -671,7 +671,7 @@ body {
 
 .navigation-login {
   gap: 6px;
-  width: 88px;
+  min-width: 88px;
   box-sizing: border-box;
 }
 
@@ -1498,7 +1498,7 @@ body {
 .present-description {
   margin: 0;
   width: 307px;
-  height: 66px;
+  min-height: 66px;
 }
 
 /* About */
@@ -1800,14 +1800,24 @@ body {
   display: none;
 }
 
+.tooltip-text::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: -21px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #b9b9b9 transparent transparent;
+}
+
 .tooltip-text::after {
   content: "";
   position: absolute;
   top: 11px;
-  right: 100%;
+  left: -20px;
   border-width: 10px;
   border-style: solid;
-  border-color: transparent #b9b9b9 transparent transparent;
+  border-color: transparent #ffffff transparent transparent;
 }
 
 .tooltip-toggle:hover + .tooltip-text,
@@ -1963,8 +1973,8 @@ body {
 .footer-container {
   display: flex;
   justify-content: space-between;
-  min-height: 153px;
-  align-items: center;
+  padding: 46px 0;
+
 }
 
 .footer-catalog {
@@ -1975,18 +1985,23 @@ body {
   display: flex;
   min-height: 61px;
   flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
 }
 
 .footer-social-list {
   display: flex;
-  justify-content: space-between;
-  width: 104px;
+  justify-content: flex-start;
+    max-width: 104px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .footer-menu-list {
   display: grid;
   grid-template-columns: 130px 183px;
-  gap: 0 21px;
+  gap: 7px 21px;
   margin: 0 257px 5px 282px;
 }
 
@@ -2021,6 +2036,7 @@ body {
   color: #2d3440;
   font-size: 12px;
   line-height: 16px;
+  width: 193px;
 }
 
 .htmlacademy-link {
@@ -2030,6 +2046,7 @@ body {
 }
 
 .about-text {
+
   font-size: 12px;
   line-height: 16px;
   color: #2d3440;
