@@ -1520,7 +1520,6 @@ body {
   display: flex;
   gap: 30px;
   margin-top: 54px;
-  align-items: flex-start;
 }
 
 .present-block {
@@ -1986,63 +1985,38 @@ body {
   position: relative;
 }
 
-.control-mark-check {
+.control-mark-check,
+.control-mark-circle-check {
   display: none;
 }
 
 .control-mark-check:hover path,
 .control-mark-circle:hover path,
-.control-mark:hover path {
+.control-mark:hover path,
+.control-mark-circle-check:hover path {
   fill: #ffffff;
 }
 
-.control-input[type="checkbox"]:focus-within + .control-mark,
-.control-input[type="checkbox"]:focus-within + .control-mark + .control-mark-check ,
-.control-input[type="radio"]:focus-within + .control-mark-circle {
+.control-input[type="checkbox"]:focus-within + .control-mark path,
+.control-input[type="checkbox"]:focus-within + .control-mark + .control-mark-check path ,
+.control-input[type="radio"]:focus-within + .control-mark-circle path,
+.control-input[type="radio"]:focus-within + .control-mark-circle + .control-mark-circle-check path {
   fill: #ffffff;
 }
 
-.control-input[type="radio"]:checked + .control-mark-circle::before {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 6px;
-  height: 6px;
-  background-color: #2d3440;
-  border-radius: 50%;
-  content: "";
-}
-
-.control-input:disabled[type="radio"]:checked + .control-mark-circle::before {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 6px;
-  height: 6px;
-  background-color: #2d3440;
-  border-radius: 50%;
-  content: "";
-}
-
-.control-input[type="radio"]:checked + .control-mark-circle:hover::before {
-  background-color: #ffffff;
-}
-
-.control-input:disabled[type="radio"]:checked + .control-mark-circle:hover::before {
-  background-color: #ffffff;
-}
-
-.control-input[type="checkbox"]:checked + .control-mark + .control-mark-check {
+.control-input[type="checkbox"]:checked + .control-mark + .control-mark-check,
+.control-input[type="radio"]:checked + .control-mark-circle + .control-mark-circle-check {
   display: flex;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark {
+.control-input[type="checkbox"]:checked + .control-mark,
+.control-input[type="radio"]:checked + .control-mark-circle {
   display: none;
 }
 
 .control-input:disabled + .control-mark-circle,
 .control-input:disabled + .control-mark,
-.control-input:disabled + .control-mark + .control-mark-check {
+.control-input:disabled + .control-mark + .control-mark-check, .control-input:disabled + .control-mark-circle + .control-mark-circle-check{
   opacity: 0.4;
 }
 
